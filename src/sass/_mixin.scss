@@ -1,0 +1,22 @@
+@use './colors' as c;
+
+@mixin flex-center($fdir) {
+	display: flex;
+	flex-direction: $fdir;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin flex-space($fdir) {
+	display: flex;
+	flex-direction: $fdir;
+	justify-content: space-between;
+	align-items: center;
+}
+
+@mixin burger-bar {
+	height: 2px;
+	width: 30px;
+	background-color: c.$darkGrey;
+    border-radius: 1px;
+}
