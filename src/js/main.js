@@ -3,49 +3,39 @@ const burgerBars = document.querySelector('.burger-bar')
 const navbar = document.querySelector('.navbar')
 const navbarListItem = document.querySelectorAll('.navbar__listitem')
 
-// let root = document.documentElement
-let delay = 0.2
-
 const showNav = () => {
+	navbar.classList.add('navbar-active')
+	navbar.classList.remove('navbar-hide')
+	burgerBars.classList.add('burger-active')
+	burgerBars.classList.remove('burger-back')
+}
+const hideNav = () => {
+	navbar.classList.remove('navbar-active')
+	navbar.classList.add('navbar-hide')
+	burgerBars.classList.remove('burger-active')
+	burgerBars.classList.add('burger-back')
+}
+
+const navbarItemEntry = () => {
+	let delayTime = 0
+
+	navbarListItem.forEach(item => {
+		item.classList.toggle('nav-entry')
+		item.style.animationDelay = '.' + delayTime + 's'
+		delayTime++
+	})
+}
+
+const navHandling = () => {
 	if (!navbar.classList.contains('navbar-active')) {
-		navbar.classList.add('navbar-active')
-		navbar.classList.remove('navbar-hide')
+		showNav()
 	} else {
-		navbar.classList.remove('navbar-active')
-		navbar.classList.add('navbar-hide')
+		hideNav()
 	}
+	navbarItemEntry()
+	navbarListItem.forEach(item => {
+		item.addEventListener('click', hideNav)
+	})
 }
 
-const swapBurger = () => {
-	// burgerBars.classList.toggle('burger-active')
-	if (!burgerBars.classList.contains('burger-active')) {
-		burgerBars.classList.add('burger-active')
-		burgerBars.classList.remove('burger-back')
-	} else {
-		burgerBars.classList.remove('burger-active')
-		burgerBars.classList.add('burger-back')
-	}
-}
-
-// const navbarItemEntry = () => {
-// 	navbarListItem.forEach(item => {
-//       setTimeout(() => {
-//         item.classList.add('nav-entry')
-//        }, delay); 
-//        delay += 0.2
-// 	})
-// }
-
-burgerBtn.addEventListener('click', () => {
-	showNav()
-	swapBurger()
-	// navbarItemEntry()
-})
-
-// const navbarItemEntry = () => {
-// 	navbarListItem.forEach(item => {
-//         root.style.setProperty('--delay', `${delay}s`)
-// 		delay += 0.2
-// 		item.classList.add('nav-entry')
-// 	})
-// }
+burgerBtn.addEventListener('click', navHandling)

@@ -7,18 +7,18 @@
 //navigation entry
 
 @keyframes shownav {
-	0% {
+	from {
 		left: 100%;
 	}
-	100% {
+	to {
 		left: 0;
 	}
 }
 @keyframes hidenav {
-	0% {
+	from {
 		left: 0;
 	}
-	100% {
+	to {
 		left: 100%;
 	}
 }
@@ -105,15 +105,15 @@
 
 //navitem entry
 
-// @keyframes navItemEntry {
-// 	from {
-// 		transform: translateX(300%);
-// 	}
-// 	to {
-// 		transform: translateX(0);
-// 	}
-// }
+@keyframes navItemEntry {
+	from {
+		transform: translateX(200%);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
 
-// .nav-entry {
-// 	animation: navItemEntry 0.3s forwards;
-// }
+.nav-entry {
+	animation: navItemEntry 0.3s both;
+}
