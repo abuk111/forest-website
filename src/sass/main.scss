@@ -12,8 +12,10 @@
 
 html {
 	font-size: 62.5%;
-	scroll-behavior: smooth;
+	max-width: 100%;
 	overflow-x: hidden;
+	scroll-behavior: smooth;
+	scroll-padding-top: 73px;
 }
 
 body {
@@ -28,9 +30,19 @@ body {
 }
 // nav
 
+nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: fit-content;
+	background-color: c.$white-alpha;
+	z-index: 100;
+}
+
 .nav {
 	@include mix.flex-space(row);
-	margin: 1em auto;
+	padding: 1em;
+	z-index: 100;
 
 	.logo {
 		@include mix.flex-center(row);
@@ -42,6 +54,9 @@ body {
 			font-size: 3rem;
 			margin-left: 0.25em;
 		}
+
+		text-decoration: none;
+		cursor: pointer;
 	}
 
 	.burger-btn {
@@ -72,7 +87,7 @@ body {
 	}
 	.navbar {
 		@include mix.flex-center(column);
-		position: absolute;
+		position: fixed;
 		top: 0;
 		left: 100%;
 		width: 100%;
@@ -114,23 +129,15 @@ body {
 // header
 
 .header {
+	margin-top: 73px;
 	&__hero-img {
-		position: relative;
-		width: 100%;
+		@include mix.hero-img('../images/jungle-1807476_640.jpg');
 		height: 50vh;
-		background-image: url(../images/jungle-1807476_640.jpg);
-		background-size: cover;
-		background-position: center;
-		z-index: 0;
 
 		&-shadow {
 			@include mix.flex-center(column);
 			align-items: start;
-			position: absolute;
-			width: 100%;
-			height: 100%;
-			background-color: c.$heroShadow;
-			z-index: 1;
+			@include mix.shadow;
 		}
 	}
 
@@ -151,13 +158,89 @@ body {
 	}
 }
 
+// section - general
+
+.section {
+	margin: 2em auto;
+}
+
+.section-header {
+	margin-bottom: 1em;
+	font-size: 3.6rem;
+	font-weight: 300;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+//about-us
+
+.about-us {
+	.img-mobile {
+		width: 100vw;
+		margin-bottom: 2em;
+	}
+
+	.img-desktop {
+		display: none;
+	}
+
+	.section-body {
+		.about-us__box {
+			&-header {
+				font-size: 2.4rem;
+				font-weight: bold;
+				text-align: center;
+				margin-bottom: 1em;
+			}
+			&-text {
+				font-size: 1.5rem;
+				line-height: 1.75em;
+			}
+		}
+	}
+}
+
+// adventure
+
+.adventure {
+	&__hero-img {
+		@include mix.hero-img('../images/girl-5785590_640.jpg');
+		height: 35vh;
+
+		&-shadow {
+			@include mix.flex-center(column);
+			align-items: start;
+			@include mix.shadow;
+		}
+	}
+
+	&__text {
+		h2 {
+			padding: 1em;
+			color: c.$white;
+			font-size: 3rem;
+			font-weight: 400;
+			text-align: center;
+			border: 1px solid c.$white;
+		}
+	}
+}
+
 // media
 
 @media (min-width: 768px) {
-	// nav
+	html {
+		scroll-padding-top: 72px;
+	}
 
 	.wrapper {
 		padding: 0 2.5em;
+	}
+
+	nav {
+		margin: 0 auto;
+		left: 50%;
+		transform: translateX(-50%);
 	}
 
 	.nav {
@@ -172,17 +255,30 @@ body {
 			@include mix.flex-end(row);
 			top: 0;
 			left: 0;
-			height: min-content;
+			height: fit-content;
 			background: none;
 
 			&__list {
 				@include mix.flex-space(row);
 
 				&item {
+					@include mix.flex-center(row);
 					transform: translateX(0);
-
+					margin: 0;
+					padding: 0;
 					&-link {
+						// display: inline-block;
+
+						margin: 0;
+						padding: 1em 0.75em;
 						font-size: 2.4rem;
+						line-height: 1em;
+						transition: color 0.3s, background-color 0.3s;
+
+						&:hover {
+							color: c.$white;
+							background-color: c.$black;
+						}
 					}
 				}
 			}
@@ -195,8 +291,10 @@ body {
 	// header
 
 	.header {
+		margin-top: 72px;
 		&__hero-img {
 			background-image: url(../images/jungle-1807476_1920.jpg);
+			height: 45vh;
 		}
 		&__text {
 			&-h1 {
@@ -209,17 +307,136 @@ body {
 			}
 		}
 	}
+
+	//about-us
+
+	.about-us {
+		.section-body {
+			@include mix.flex-center(row);
+			align-items: flex-start;
+
+			.img-desktop {
+				display: block;
+				width: 40vw;
+				margin-right: 2em;
+			}
+
+			.about-us__box {
+				&-header {
+					text-align: left;
+				}
+			}
+		}
+
+		.img-mobile {
+			display: none;
+		}
+	}
+
+	// adventure
+
+	.adventure {
+		&__hero-img {
+			background-image: url(../images/girl-5785590_1920.jpg);
+			height: 20vh;
+		}
+
+		&__text {
+			h2 {
+				padding: 0.5em 3em;
+				font-size: 2.4rem;
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	//about us
+
+	.about-us {
+		.section-body {
+			.about-us__box {
+				&-header {
+					font-size: 3.2rem;
+					margin-bottom: 1em;
+				}
+				&-text {
+					font-size: 1.5rem;
+					line-height: 1.75em;
+				}
+			}
+		}
+	}
+
+	// adventure
+
+	.adventure {
+		&__text {
+			h2 {
+				padding: 0.5em 3em;
+				font-size: 3.6rem;
+				font-weight: bold;
+			}
+		}
+	}
 }
 
 @media (min-width: 1200px) {
-	.header{&__text {
-		&-h1 {
-			font-size: 3rem;
-			margin-bottom: 0.2em;
+	//header
+	.header {
+		&__text {
+			&-h1 {
+				font-size: 3rem;
+				margin-bottom: 0.2em;
+			}
+			&-p {
+				font-size: 4.6rem;
+				line-height: 1em;
+			}
 		}
-		&-p {
-			font-size: 4.6rem;
-			line-height: 1em;
+	}
+
+	.section-header {
+		margin-bottom: 1em;
+		font-size: 4.8rem;
+	}
+
+	//about us
+
+	.about-us {
+		.section-body {
+			.about-us__box {
+				margin-left: 2em;
+
+				&-header {
+					font-size: 3.4rem;
+					margin-bottom: 1em;
+				}
+				&-text {
+					font-size: 1.8rem;
+					line-height: 1.75em;
+				}
+			}
 		}
-	}}
+	}
+
+	// adventure
+
+	.adventure {
+		margin: 5em 0;
+		&__hero-img {
+			height: 40vh;
+		}
+
+		&__text {
+			h2 {
+				padding: 0.5em 4em;
+				font-size: 4.2rem;
+			}
+		}
+	}
+}
+
+.test {
+	height: 50vh;
 }

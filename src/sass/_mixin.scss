@@ -26,3 +26,20 @@
 	background-color: c.$darkGrey;
     border-radius: 1px;
 }
+
+@mixin hero-img($link){
+	position: relative;
+	width: 100%;
+	background-image: url($link);
+	background-size: cover;
+	background-position: center;
+	z-index: 0;
+}
+
+@mixin shadow {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: c.$heroShadow;
+	z-index: 1;
+}
