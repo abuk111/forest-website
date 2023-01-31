@@ -165,7 +165,7 @@ nav {
 }
 
 .section-header {
-	margin-bottom: 1em;
+	margin: 1em auto;
 	font-size: 3.6rem;
 	font-weight: 300;
 	text-align: center;
@@ -224,6 +224,72 @@ nav {
 			border: 1px solid c.$white;
 		}
 	}
+}
+
+//offer
+
+.offer {
+	@include mix.flex-center(column);
+	&-p {
+		margin-bottom: 1.8em;
+		padding: 0 0.5em;
+		font-size: 2rem;
+		text-align: center;
+		line-height: 1.8em;
+	}
+
+	&-cardbox {
+		@include mix.flex-center(column);
+	}
+
+	.offer-card {
+		@include mix.flex-center(column);
+		min-width: 280px;
+		margin: 1em;
+		padding: 1.5em 2em;
+		box-shadow: 0 0 10px c.$heroShadow;
+		border-radius: 10px;
+
+		&__head {
+			margin-bottom: 0.4em;
+			font-size: 3rem;
+			font-weight: 300;
+		}
+
+		&__price {
+			margin-bottom: 0.25em;
+			font-size: 4.6rem;
+			font-weight: 400;
+
+			span {
+				font-size: 5.2rem;
+			}
+		}
+
+		&__options {
+			margin-bottom: 1em;
+			line-height: 1.8em;
+
+			&--disabled {
+				color: c.$grey;
+			}
+		}
+
+		.option-enabled {
+			color: c.$green;
+		}
+
+		&__btn {
+			@include mix.offer-button;
+		}
+	}
+	&-morebtn {
+		@include mix.offer-button;
+		width: 95%;
+		margin-top: 1em;
+		font-size: 2rem;
+		font-weight: bold;
+			}
 }
 
 // media
@@ -348,6 +414,17 @@ nav {
 			}
 		}
 	}
+
+	//offer
+
+	.offer {
+		&-cardbox {
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+	}
+
+
 }
 
 @media (min-width: 992px) {
@@ -423,7 +500,7 @@ nav {
 	// adventure
 
 	.adventure {
-		margin: 5em 0;
+		margin-top: 5em;
 		&__hero-img {
 			height: 40vh;
 		}
@@ -435,8 +512,19 @@ nav {
 			}
 		}
 	}
+
+	//offer
+
+	.offer {
+		.offer-card{
+			margin: 1.5em;
+			padding: 2em 3em;
+		}
+
+		&-morebtn {
+			padding: 1em;
+		}
+	}
 }
 
-.test {
-	height: 50vh;
-}
+

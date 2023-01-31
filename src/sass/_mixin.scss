@@ -24,10 +24,10 @@
 	height: 2px;
 	width: 30px;
 	background-color: c.$darkGrey;
-    border-radius: 1px;
+	border-radius: 1px;
 }
 
-@mixin hero-img($link){
+@mixin hero-img($link) {
 	position: relative;
 	width: 100%;
 	background-image: url($link);
@@ -42,4 +42,21 @@
 	height: 100%;
 	background-color: c.$heroShadow;
 	z-index: 1;
+}
+
+@mixin offer-button {
+	padding: 0.5em 3em;
+	font-size: 1.8rem;
+	font-weight: 300;
+	background: none;
+	border: transparent;
+	border-radius: 10px;
+	box-shadow: 0 0 10px c.$heroShadow;
+	transition: background-color 0.3s, box-shadow 0.3s;
+	cursor: pointer;
+
+	&:hover {
+		background-color: c.$green;
+		box-shadow: 0 0 10px c.$green;
+	}
 }
