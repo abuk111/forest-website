@@ -2,6 +2,7 @@ const burgerBtn = document.querySelector('.burger-btn')
 const burgerBars = document.querySelector('.burger-bar')
 const navbar = document.querySelector('.navbar')
 const navbarListItem = document.querySelectorAll('.navbar__listitem')
+const footerYear = document.querySelector('#date')
 
 const showNav = () => {
 	navbar.classList.add('navbar-active')
@@ -38,4 +39,10 @@ const navHandling = () => {
 	})
 }
 
+const handleCurrentYear = () => {
+	const year = new Date().getFullYear()
+	footerYear.innerText = year
+}
+
+handleCurrentYear()
 burgerBtn.addEventListener('click', navHandling)
