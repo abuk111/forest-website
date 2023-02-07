@@ -413,6 +413,11 @@ footer {
 		.navbar-hide {
 			transform: translateX(0);
 		}
+		.nav-item-active {
+			color: c.$white !important;
+			background-color: c.$black;
+		}
+		
 	}
 
 	// header
@@ -642,3 +647,5 @@ footer {
 		}
 	}
 }
+
+.test {height: 50vh;}
