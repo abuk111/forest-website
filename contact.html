@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/dist/css/main-min.css">
+    <link rel="stylesheet" href="/dist/css/contact-min.css">
     <script src="https://kit.fontawesome.com/a8324f3062.js" crossorigin="anonymous"></script>
 </head>
 
@@ -49,7 +50,76 @@
 
    </header>
 
-    <section class="test"></section>
+    <section class="map">
+        <h2 class="section-header  wrapper">Znajdź nas!</h2>
+        <div class="map__mapbox">
+            <iframe class="map__mapbox-map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.8982686590143!2d19.89066021589244!3d50.088191521281395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165a326d015c3b%3A0x47a12cd367a1f34e!2sRestauracja%20McDonald&#39;s!5e0!3m2!1spl!2spl!4v1676210614929!5m2!1spl!2spl"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <!-- width="800" height="600" style="border:0;" -->
+        </div>
+
+        <div class="map__boxes wrapper">
+            <div class="map__adressbox map__infobox ">
+                <h3 class="map__adressbox-header map__infobox-header">Adres</h3>
+                <p class="map__adressbox-adress">Forest Park inc.</p>
+                <p class="map__adressbox-adress">ul. Jasnogórska 2</p>
+                <p class="map__adressbox-adress">31-358 Kraków</p>
+            </div>
+            <div class="map__openingbox map__infobox ">
+                <h3 class="map__openingbox-header map__infobox-header">Godziny otwarcia</h3>
+                <p class="map__openingbox-open">Poniedziałek - piątek: 10:00 - 18:00</p>
+                <p class="map__openingbox-open">Sobota: 10:00 - 20:00</p>
+                <p class="map__openingbox-open">Niedziela: 12:00 - 20:00</p>
+            </div>
+            <div class="map__contactbox map__infobox ">
+                <h3 class="map__contactbox-header map__infobox-header">Dane kontaktowe</h3>
+                <p> <a href="tel:555555555" class="map__contactbox-open"> <i class="fa-solid fa-phone"></i>nr tel: 555
+                        555
+                        555</a> </p>
+                <p> <a href="mailto:forest@forest.pl" class="map__contactbox-open"><i class="fa-solid fa-envelope"></i>
+                        mail: forest@forest.pl</a> </p>
+                <p> <a href="#" class="map__contactbox-open"> <i class="fa-solid fa-globe"></i></i> www:
+                        www.forest.pl</a> </p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="form wrapper">
+        <h2 class="section-header  wrapper">Napisz do nas!</h2>
+        <form class="formbox">
+            <div class="formbox__form">
+                <label for="name">Imię i nazwisko:</label>
+                <input type="text" id="name" placeholder="Podaj swoje imię i nazwisko">
+                <p class="error-text">error</p>
+            </div>
+            <div class="formbox__form">
+                <label for="mail">Adres e-mail</label>
+                <input type="text" id="mail" placeholder="Podaj swój e-mail">
+                <p class="error-text">error</p>
+            </div>
+            <div class="formbox__form">
+                <label for="phone">Telefon:</label>
+                <input type="text" id="phone" placeholder="Podaj swój numer telefonu">
+                <p class="error-text">error</p>
+            </div>
+            <div class="formbox__form">
+                <label for="message">Wiadomość:</label>
+                <textarea type="text" id="message" placeholder="Wpisz wiadomość"></textarea>
+                <p class="error-text">error</p>
+            </div>
+            <button class="formbox__send">Wyślij!</button>
+        </form>
+    </section>
+
+    <div class="popup ">
+        <div class="popup__window">
+            <p class="popup__window-text">Twoja wiadomość została wysłana! Dziękujemy.</p>
+            <button class="popup__window-close">Zamknij</button>
+        </div>
+    </div>
 
     <footer>
     <div class="footer wrapper">

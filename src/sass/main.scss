@@ -28,6 +28,21 @@ body {
 	padding: 0 2em;
 	margin: 0 auto;
 }
+
+// section - general
+
+.section {
+	margin: 2em auto;
+}
+
+.section-header {
+	margin: 1em auto;
+	font-size: 3.6rem;
+	font-weight: 300;
+	text-align: center;
+	text-transform: uppercase;
+}
+
 // nav
 
 nav {
@@ -158,19 +173,6 @@ nav {
 	}
 }
 
-// section - general
-
-.section {
-	margin: 2em auto;
-}
-
-.section-header {
-	margin: 1em auto;
-	font-size: 3.6rem;
-	font-weight: 300;
-	text-align: center;
-	text-transform: uppercase;
-}
 
 //about-us
 
@@ -417,7 +419,6 @@ footer {
 			color: c.$white !important;
 			background-color: c.$black;
 		}
-		
 	}
 
 	// header
@@ -648,4 +649,6 @@ footer {
 	}
 }
 
-.test {height: 50vh;}
+.test {
+	height: 50vh;
+}
