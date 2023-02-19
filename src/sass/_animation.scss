@@ -117,3 +117,101 @@
 .nav-entry {
 	animation: navItemEntry 0.3s both;
 }
+
+//
+
+@keyframes showDetailBox {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes hideDetailBox {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+@keyframes showOptionD {
+	0% {
+		height: 0;
+		background-color: c.$white;
+		transform: scaleY(0) translateY(-100%);
+	}
+	50% {
+		height: fit-content;
+		background-color: c.$lightGrey;
+		transform: scaleY(0) translateY(-100%);
+		transform-origin: top;
+	}
+	100% {
+		background-color: c.$lightGrey;
+		transform: scaleY(1) translateY(0);
+	}
+}
+@keyframes showOptionH {
+	0% {
+		background-color: c.$white;
+	}
+
+	50% {
+		background-color: c.$lightGrey;
+	}
+	100% {
+		background-color: c.$lightGrey;
+	}
+}
+@keyframes hideOptionD {
+	0% {
+		background-color: c.$lightGrey;
+		transform: scaleY(1) translateY(0);
+	}
+	50% {
+		height: fit-content;
+		background-color: c.$lightGrey;
+		transform: scaleY(0) translateY(-100%);
+		transform-origin: top;
+	}
+	100% {
+		height: 0;
+		background-color: c.$white;
+		transform: scaleY(0) translateY(-100%);
+	}
+}
+@keyframes hideOptionH {
+	0% {
+		background-color: c.$lightGrey;
+	}
+
+	50% {
+		background-color: c.$lightGrey;
+	}
+	100% {
+		background-color: c.$white;
+	}
+}
+
+
+.show-detail {
+	animation: showDetailBox 0.5s forwards;
+}
+.hide-detail {
+	animation: hideDetailBox 0.5s forwards;
+}
+
+.show-option-d {
+	animation: showOptionD 0.5s forwards;
+}
+.show-option-h {
+	animation: showOptionH 0.5s forwards;
+}
+.hide-option-d {
+	animation: hideOptionD 0.5s forwards;
+}
+.hide-option-h {
+	animation: hideOptionH 0.5s forwards;}

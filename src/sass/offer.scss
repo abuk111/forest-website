@@ -1,0 +1,229 @@
+@use './colors' as c;
+@use './mixin' as mix;
+
+body {
+	position: relative;
+}
+
+.nav {
+	background-color: c.$white;
+}
+
+.offer {
+	&-cardbox {
+		min-width: 280px;
+		box-shadow: 0 0 10px c.$heroShadow;
+		border-radius: 10px;
+
+		.offer-card {
+			margin: 0;
+			// padding: 1.5em 2em;
+			box-shadow: none;
+			border-radius: 0px;
+
+			&--highlight {
+				background-color: c.$lightGrey;
+			}
+		}
+	}
+
+	&__detailbox {
+		display: none;
+		position: relative;
+		position: absolute;
+		// position: fixed;
+		width: 100vw;
+		// height: 100vh;
+		// top: 100px;
+		top: 0;
+		left: 0;
+		padding: 1.5em;
+		background-color: c.$white;
+		box-shadow: 0 0 100px 50px c.$heroShadow;
+
+		&--active {
+			display: flex;
+		}
+
+		&-close {
+			position: fixed;
+			display: flex;
+			justify-content: end;
+			align-items: center;
+			width: 100vw;
+			top: 73px;
+			left: 0;
+
+			background-color: c.$white;
+
+			i {
+				margin-right: 0.75em;
+				padding: 0.25em;
+				font-size: 3rem;
+				cursor: pointer;
+				transition: transform 0.3s;
+
+				&:hover {
+					transform: scale(1.15);
+				}
+			}
+		}
+	}
+
+	&__detail {
+		display: none;
+
+		margin-top: 1.5em;
+
+		&-show {
+			@include mix.flex-center(column);
+		}
+
+		&__head {
+			margin-bottom: 0.4em;
+			font-size: 4rem;
+			font-weight: 300;
+
+			&text {
+				margin: 1em auto;
+				text-align: center;
+			}
+		}
+
+		&__content {
+			@include mix.flex-center(column);
+
+			&-head {
+				margin-bottom: 1em;
+				font-size: 2.5rem;
+				font-weight: 300;
+			}
+
+			&-option {
+				@include mix.flex-center(column);
+				width: 85vw;
+				margin-bottom: 1em;
+
+				&head {
+					display: grid;
+					grid-template-columns: 0.5fr 4fr 0.5fr;
+					grid-template-rows: 1fr;
+					align-items: center;
+					width: 100%;
+					padding: 0.5em;
+					font-size: 2rem;
+					// margin-bottom: 0.25em;
+				}
+
+				.fa-check {
+					color: c.$green;
+					margin-right: 1em;
+				}
+
+				.fa-caret-square-down {
+					right: 100%;
+					margin-left: 1em;
+					transition: transform 0.3s, color 0.3s;
+					cursor: pointer;
+
+					&:hover {
+						transform: scale(1.1);
+						color: c.$green;
+					}
+				}
+
+				&description {
+					display: none;
+					width: 100%;
+					padding: 1em;
+					background-color: c.$lightGrey;
+					border-radius: 0 0 1em 1em;
+				}
+
+				.option-show {
+					display: flex;
+				}
+
+				.option-show-head {
+					background-color: c.$lightGrey;
+					border-radius: 1em 1em 0 0;
+				}
+
+				.option-disabled {
+					color: c.$grey;
+					font-size: 1.8rem;
+				}
+			}
+		}
+
+		&__pricebox {
+			@include mix.flex-center(row);
+
+			&-head {
+				margin-right: 0.25em;
+				margin-bottom: 0.25em;
+				font-size: 3.6rem;
+				font-weight: 300;
+			}
+
+			&-price {
+				margin-bottom: 0.25em;
+				font-size: 4.3rem;
+				font-weight: 300;
+				color: c.$forest-green;
+			}
+
+			span {
+				font-size: 4rem;
+			}
+		}
+
+		&__footer {
+			@include mix.flex-center(column);
+
+			&-text {
+				margin: 1em auto;
+				text-align: center;
+			}
+			&-btn {
+				@include mix.offer-button;
+				margin: 2em auto;
+				text-align: center;
+			}
+		}
+	}
+}
+
+// offer__detailbox--active      <offer__detailbox>
+// offer__detail-show
+// option-show-head  			< offer__detail__content-optionhead >
+// option-show					< offer__detail__content-optiondescription>
+
+@media (min-width: 768px) {
+	.offer {
+		&-cardbox {
+			flex-direction: row;
+			flex-wrap: wrap;
+
+			.offer-card {
+				padding: 1em;
+				&--highlight {
+					background-color: c.$white;
+				}
+			}
+		}
+
+		&__detail {
+			&__head {
+				&text {
+					font-size: 1.6rem;
+					text-align: left;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	
+}

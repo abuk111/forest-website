@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/dist/css/main-min.css">
+    <link rel="stylesheet" href="/dist/css/offer-min.css">
     <script src="https://kit.fontawesome.com/a8324f3062.js" crossorigin="anonymous"></script>
 </head>
 
@@ -18,12 +19,329 @@
 
     <!-- @include header.kit -->
 
-    <section class="test"></section>
+
+
+    <section class="offer section wrapper" id="offer">
+        <h2 class="offer-heading section-header">Oferta</h2>
+        <p class="offer-p">Wybierz jedną z naszych wspaniałych ofert!</p>
+        <div class="offer-cardbox offer-left">
+            <div class="offer-card">
+                <h3 class="offer-card__head">Demo</h3>
+                <p class="offer-card__price"><span class="offer-card__pricespan">$</span>0</p>
+                <div class="offer-card__options">
+                    <div class="offer-card__options--enabled"><i class="fas fa-check option-enabled"></i> Opcja w
+                        pakiecie</div>
+                    <div class="offer-card__options--enabled"><i class="fas fa-check option-enabled"></i> Opcja w
+                        pakiecie</div>
+                    <div class="offer-card__options--disabled"><i class="fas fa-minus option-disabled"> </i> Opcja poza
+                        pakietem</div>
+                    <div class="offer-card__options--disabled"><i class="fas fa-minus option-disabled"> </i> Opcja poza
+                        pakietem</div>
+                    <div class="offer-card__options--disabled"><i class="fas fa-minus option-disabled"> </i> Opcja poza
+                        pakietem</div>
+                </div>
+                <button class="offer-card__btn btn-details offer-first">Zobacz szczegóły oferty</button>
+            </div>
+            <div class="offer-card offer-card--highlight">
+                <h3 class="offer-card__head">Standard</h3>
+                <p class="offer-card__price"><span class="offer-card__pricespan">$</span>99</p>
+                <div class="offer-card__options">
+                    <div class="offer-card__options--enabled"><i class="fas fa-check option-enabled"></i> Opcja w
+                        pakiecie</div>
+                    <div class="offer-card__options--enabled"><i class="fas fa-check option-enabled"></i> Opcja w
+                        pakiecie</div>
+                    <div class="offer-card__options--enabled"><i class="fas fa-check option-enabled"></i> Opcja w
+                        pakiecie</div>
+                    <div class="offer-card__options--disabled"><i class="fas fa-minus option-disabled"> </i> Opcja poza
+                        pakietem</div>
+                    <div class="offer-card__options--disabled"><i class="fas fa-minus option-disabled"> </i> Opcja poza
+                        pakietem</div>
+                </div>
+                <button class="offer-card__btn btn-details offer-second">Zobacz szczegóły oferty</button>
+            </div>
+            <div class="offer-card">
+                <h3 class="offer-card__head">Premium</h3>
+                <p class="offer-card__price"><span class="offer-card__pricespan">$</span>299</p>
+                <div class="offer-card__options">
+                    <div class="offer-card__options--enabled"><i class="fas fa-check option-enabled"></i> Opcja w
+                        pakiecie</div>
+                    <div class="offer-card__options--enabled"><i class="fas fa-check option-enabled"></i> Opcja w
+                        pakiecie</div>
+                    <div class="offer-card__options--enabled"><i class="fas fa-check option-enabled"></i> Opcja w
+                        pakiecie</div>
+                    <div class="offer-card__options--enabled"><i class="fas fa-check option-enabled"></i> Opcja w
+                        pakiecie</div>
+                    <div class="offer-card__options--enabled"><i class="fas fa-check option-enabled"></i> Opcja w
+                        pakiecie</div>
+                </div>
+                <button class="offer-card__btn btn-details offer-third">Zobacz szczegóły oferty</button>
+            </div>
+        </div>
+
+        <div class="offer__detailbox offer-right">
+            <div class="offer__detailbox-close"><i class="fas fa-times"></i></div>
+
+            <div class="offer__detail offer__detail-first ">
+                <h3 class="offer__detail__head">Demo</h3>
+                <p class="offer__detail__headtext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur,
+                    beatae? Numquam doloribus eius sapiente delectus qui, fugiat aspernatur atque illum placeat
+                    similique eos accusamus quod aliquid tempore tenetur culpa temporibus.</p>
+
+
+                <div class="offer__detail__content">
+
+                    <h4 class="offer__detail__content-head">Zawartość pakietu:</h4>
+
+                    <div class="offer__detail__content-option option-enabled">
+                        <div class="offer__detail__content-optionhead "> <i class="fas fa-check option-enabled"></i>
+                            <p>Opcja
+                                w pakiecie</p> <i class="far fa-caret-square-down"></i>
+                        </div>
+                        <div class="offer__detail__content-optiondescription">
+                            <p class="option-description ">Lorem ipsum dolor sit amet consectetur adipisicing
+                                elit.
+                                Corporis eaque incidunt, laborum ab ut repellendus sunt. Minus quo iure quas?
+                                Itaque, nobis.</p>
+                        </div>
+                    </div>
+                    <div class="offer__detail__content-option option-enabled">
+                        <div class="offer__detail__content-optionhead"> <i class="fas fa-check option-enabled"></i>Opcja
+                            w pakiecie <i class="far fa-caret-square-down"></i></div>
+                        <div class="offer__detail__content-optiondescription">
+                            <p class="option-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Officia similique dignissimos vero laudantium iusto ipsum qui voluptate nobis pariatur
+                                unde.
+                                Itaque, nobis.</p>
+                        </div>
+                    </div>
+
+                    <div class="offer__detail__content-option option-disabled">
+                        <div class="offer__detail__content-optionhead"> <i class="fas fa-minus option-disabled"> </i>
+                            <p class="option-disabled">Opcja poza pakietem</p><i
+                                class="far fa-caret-square-down option-disabled"></i>
+                        </div>
+                        <div class="offer__detail__content-optiondescription ">
+                            <p class="option-description option-disabled">Sprawdź pakiet STANDARD</p>
+                        </div>
+                    </div>
+                    <div class="offer__detail__content-option option-disabled">
+                        <div class="offer__detail__content-optionhead"> <i class="fas fa-minus option-disabled"> </i>
+                            <p class="option-disabled">Opcja poza pakietem</p><i
+                                class="far fa-caret-square-down option-disabled"></i>
+                        </div>
+                        <div class="offer__detail__content-optiondescription ">
+                            <p class="option-description option-disabled">Sprawdź pakiet PREMIUM</p>
+                        </div>
+                    </div>
+                    <div class="offer__detail__content-option option-disabled">
+                        <div class="offer__detail__content-optionhead"> <i class="fas fa-minus option-disabled"> </i>
+                            <p class="option-disabled">Opcja poza pakietem</p><i
+                                class="far fa-caret-square-down option-disabled"></i>
+                        </div>
+                        <div class="offer__detail__content-optiondescription ">
+                            <p class="option-description option-disabled">Sprawdź pakiet PREMIUM</p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+                <div class="offer__detail__pricebox">
+                    <p class="offer__detail__pricebox-head">
+                        CENA:
+                    </p>
+                    <div class="offer__detail__pricebox-price"><span>$</span>0</div>
+                </div>
+
+                <div class="offer__detail__footer">
+                    <p class="offer__detail__footer-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Deleniti,
+                        ipsa?</p>
+                    <button class="offer__detail__footer-btn">Kup pakiet</button>
+                </div>
+            </div>
+
+            <div class="offer__detail offer__detail-second">
+                <h3 class="offer__detail__head">Standard</h3>
+                <p class="offer__detail__headtext">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Consequatur,
+                    beatae? Numquam doloribus eius sapiente delectus qui, fugiat aspernatur atque illum placeat
+                    similique eos accusamus quod aliquid tempore tenetur culpa temporibus.</p>
+
+
+                <div class="offer__detail__content">
+
+                    <h4 class="offer__detail__content-head">Zawartość pakietu:</h4>
+
+                    <div class="offer__detail__content-option option-enabled">
+                        <div class="offer__detail__content-optionhead"> <i class="fas fa-check option-enabled"></i>Opcja
+                            w pakiecie <i class="far fa-caret-square-down"></i></div>
+                        <div class="offer__detail__content-optiondescription">
+                            <p class="option-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Corporis eaque incidunt, laborum ab ut repellendus sunt. Minus quo iure quas?
+                                Itaque, nobis.</p>
+                        </div>
+                    </div>
+                    <div class="offer__detail__content-option option-enabled">
+                        <div class="offer__detail__content-optionhead"> <i class="fas fa-check option-enabled"></i>Opcja
+                            w pakiecie <i class="far fa-caret-square-down"></i></div>
+                        <div class="offer__detail__content-optiondescription">
+                            <p class="option-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Officia similique dignissimos vero laudantium iusto ipsum qui voluptate nobis
+                                pariatur
+                                unde.
+                                Itaque, nobis.</p>
+                        </div>
+                    </div>
+
+                    <div class="offer__detail__content-option option-enabled">
+                        <div class="offer__detail__content-optionhead"> <i class="fas fa-check option-enabled"></i>Opcja
+                            w pakiecie <i class="far fa-caret-square-down"></i></div>
+                        <div class="offer__detail__content-optiondescription">
+                            <p class="option-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Officia similique dignissimos vero laudantium iusto ipsum qui voluptate nobis
+                                pariatur
+                                unde.
+                                Itaque, nobis.</p>
+                        </div>
+                    </div>
+
+
+
+                    <div class="offer__detail__content-option option-disabled">
+                        <div class="offer__detail__content-optionhead"> <i class="fas fa-minus option-disabled"> </i>
+                            <p class="option-disabled">Opcja poza pakietem</p><i
+                                class="far fa-caret-square-down option-disabled"></i>
+                        </div>
+                        <div class="offer__detail__content-optiondescription ">
+                            <p class="option-description option-disabled">Sprawdź pakiet PREMIUM</p>
+                        </div>
+                    </div>
+                    <div class="offer__detail__content-option option-disabled">
+                        <div class="offer__detail__content-optionhead"> <i class="fas fa-minus option-disabled"> </i>
+                            <p class="option-disabled">Opcja poza pakietem</p><i
+                                class="far fa-caret-square-down option-disabled"></i>
+                        </div>
+                        <div class="offer__detail__content-optiondescription ">
+                            <p class="option-description option-disabled">Sprawdź pakiet PREMIUM</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="offer__detail__pricebox">
+                    <p class="offer__detail__pricebox-head">
+                        CENA:
+                    </p>
+                    <div class="offer__detail__pricebox-price"><span>$</span>99</div>
+                </div>
+
+                <div class="offer__detail__footer">
+                    <p class="offer__detail__footer-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Deleniti, ipsa?</p>
+                    <button class="offer__detail__footer-btn">Kup pakiet</button>
+                </div>
+            </div>
+
+            <div class="offer__detail offer__detail-third">
+                <h3 class="offer__detail__head">Premium</h3>
+                <p class="offer__detail__headtext">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Consequatur,
+                    beatae? Numquam doloribus eius sapiente delectus qui, fugiat aspernatur atque illum placeat
+                    similique eos accusamus quod aliquid tempore tenetur culpa temporibus.</p>
+
+
+                <div class="offer__detail__content">
+
+                    <h4 class="offer__detail__content-head">Zawartość pakietu:</h4>
+
+                    <div class="offer__detail__content-option option-enabled">
+                        <div class="offer__detail__content-optionhead"> <i class="fas fa-check option-enabled"></i>Opcja
+                            w pakiecie <i class="far fa-caret-square-down"></i></div>
+                        <div class="offer__detail__content-optiondescription">
+                            <p class="option-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Corporis eaque incidunt, laborum ab ut repellendus sunt. Minus quo iure quas?
+                                Itaque, nobis.</p>
+                        </div>
+                    </div>
+                    <div class="offer__detail__content-option option-enabled">
+                        <div class="offer__detail__content-optionhead"> <i class="fas fa-check option-enabled"></i>Opcja
+                            w pakiecie <i class="far fa-caret-square-down"></i></div>
+                        <div class="offer__detail__content-optiondescription">
+                            <p class="option-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Officia similique dignissimos vero laudantium iusto ipsum qui voluptate nobis
+                                pariatur
+                                unde.
+                                Itaque, nobis.</p>
+                        </div>
+                    </div>
+
+                    <div class="offer__detail__content-option option-enabled">
+                        <div class="offer__detail__content-optionhead"> <i class="fas fa-check option-enabled"></i>Opcja
+                            w pakiecie <i class="far fa-caret-square-down"></i></div>
+                        <div class="offer__detail__content-optiondescription">
+                            <p class="option-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Officia similique dignissimos vero laudantium iusto ipsum qui voluptate nobis
+                                pariatur
+                                unde.
+                                Itaque, nobis.</p>
+                        </div>
+                    </div>
+                    <div class="offer__detail__content-option option-enabled">
+                        <div class="offer__detail__content-optionhead"> <i class="fas fa-check option-enabled"></i>Opcja
+                            w pakiecie <i class="far fa-caret-square-down"></i></div>
+                        <div class="offer__detail__content-optiondescription">
+                            <p class="option-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Officia similique dignissimos vero laudantium iusto ipsum qui voluptate nobis
+                                pariatur
+                                unde.
+                                Itaque, nobis.</p>
+                        </div>
+                    </div>
+                    <div class="offer__detail__content-option option-enabled">
+                        <div class="offer__detail__content-optionhead"> <i class="fas fa-check option-enabled"></i>Opcja
+                            w pakiecie <i class="far fa-caret-square-down"></i></div>
+                        <div class="offer__detail__content-optiondescription">
+                            <p class="option-description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                Officia similique dignissimos vero laudantium iusto ipsum qui voluptate nobis
+                                pariatur
+                                unde.
+                                Itaque, nobis.</p>
+                        </div>
+                    </div>
+
+
+
+
+
+                </div>
+                <div class="offer__detail__pricebox">
+                    <p class="offer__detail__pricebox-head">
+                        CENA:
+                    </p>
+                    <div class="offer__detail__pricebox-price"><span>$</span>299</div>
+                </div>
+
+                <div class="offer__detail__footer">
+                    <p class="offer__detail__footer-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Deleniti, ipsa?</p>
+                    <button class="offer__detail__footer-btn">Kup pakiet</button>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <button class="offer-morebtn" onclick="window.location.href='../contact.html'">Skontaktuj się z
+            nami!</button>
+    </section>
 
     <!-- @include footer.kit -->
 
 
     <script src="/dist/js/main-min.js"></script>
+    <script src="/dist/js/offer-min.js"></script>
 </body>
 
 </html>
